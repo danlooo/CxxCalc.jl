@@ -1,6 +1,3 @@
-[submodule "buildenv/wrapit"]
-	path = buildenv/wrapit
-	url = git@github.com:grasph/wrapit.git
 [submodule "wrapit"]
 	path = wrapit
 	url = git@github.com:grasph/wrapit.git
