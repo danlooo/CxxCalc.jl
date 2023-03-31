@@ -1,7 +1,0 @@
-module_name         = "Hello"
-
-input               = [ "A.h" ] 
-
-include_dirs        = [ "." ]
-
-cxx-std             = "c++17"

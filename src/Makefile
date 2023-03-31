@@ -13,18 +13,18 @@ CPPFLAGS += -MMD
 
 LINK.o = $(CXX) $(LDFLAGS) $(TARGET_ARCH)
 
-CC_FILES=jlHello.cxx
+CC_FILES=jlCxxCalc.cxx
 
 .PHONY: all clean run_demo
 
 .PRECIOUS: $(CC_FILES)
 
-PRODUCTS=jlHello.so jlHello.cxx jlHello.h Hello.jl
+PRODUCTS=jlCxxCalc.so jlCxxCalc.cxx jlCxxCalc.h CxxCalc.jl
 
 all: $(PRODUCTS)
 
 clean:
-	-$(RM) $(PRODUCTS) jlHello.d jlHello.o jlHello-report.txt
+	-$(RM) $(PRODUCTS) jlCxxCalc.d jlCxxCalc.o jlCxxCalc-report.txt
 
 jl%.cxx: %.wit
 	wrapit --force $<
@@ -38,8 +38,5 @@ jl%.so: jl%.o
 
 echo_%:
 	@echo $*=$($*)
-
-run_demo: all
-	. ./setup.sh && julia demo_Hello.jl
 
 -include $(addsuffix .d, $(basename $(CC_FILES)))

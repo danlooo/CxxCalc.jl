@@ -15,4 +15,6 @@ The CI/CD pipeline will automatically create a Julia package from that C++ libra
 ## Development
 
 This package is using [wrapit](https://github.com/grasph/wrapit), [CxxWrap.jl](https://github.com/JuliaInterop/CxxWrap.jl) and [libcxxwrap-julia](https://github.com/JuliaInterop/libcxxwrap-julia) to automatically generate julia bindings for the C++ code in the [`src`](src) directory.
-[Earthly](https://earthly.dev/) will then generate the julia package including the library with the bindings in the directory `out`.
+[Earthly](https://earthly.dev/) will then generate the julia package including the library with the bindings to the directory `out`.
+Hereby, the file `out/jlCxxCalc.so` contains the C++ functions and classes provided in the directory [`src`](src), as well as the C++ part of the julia wrapper [libcxxwrap-julia](https://github.com/JuliaInterop/libcxxwrap-julia).
+The API mapping C++ functions to julia ones are in the file `out/jlCxxCalc.cxx`.
