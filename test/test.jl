@@ -17,10 +17,14 @@ end
     say_hello(a)
 end
 
-@testset "Adding" begin
-    @test CxxCalc.CxxCalculator!hello_add(1.0, 1.0) == 2.0
-    @test CxxCalc.CxxCalculator!hello_add(1, 1) == 2
-    @test CxxCalc.CxxCalculator!hello_add(1.5, -1.5) == 0
+@testset "Arithmetics" begin
+    @test CxxCalc.CxxCalculator!cxx_add(1.0, 1.0) == 2.0
+    @test CxxCalc.CxxCalculator!cxx_add(1, 1) == 2
+    @test CxxCalc.CxxCalculator!cxx_add(1.5, -1.5) == 0
+
+    @test CxxCalc.CxxCalculator!cxx_subtract(1.0, 1.0) == 0
+    @test CxxCalc.CxxCalculator!cxx_multiply(1.0, 1.0) == 1.0
+    @test CxxCalc.CxxCalculator!cxx_divide(1.0, 2.0) == 0.5
 end
 
-println("\nTests successful!")
+println("\nTests finished!")
