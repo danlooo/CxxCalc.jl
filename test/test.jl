@@ -22,4 +22,4 @@ end
     @test Hello.A!hello_add(1.5, -1.5) == 0
 end
 
-println("\nTests sucessfulL!")
+println("\nTests successful!")
