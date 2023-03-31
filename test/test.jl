@@ -13,6 +13,7 @@ end
 
 @testset "Say Hello" begin
     a = Hello.A("World")
+    @test typeof(a) == Hello.AAllocated
     say_hello(a)
 end
 
