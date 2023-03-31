@@ -1,0 +1,9 @@
+[submodule "buildenv/wrapit"]
+	path = buildenv/wrapit
+	url = git@github.com:grasph/wrapit.git
+[submodule "wrapit"]
+	path = wrapit
+	url = git@github.com:grasph/wrapit.git
+[submodule "libcxxwrap-julia"]
+	path = libcxxwrap-julia
+	url = git@github.com:JuliaInterop/libcxxwrap-julia.git
