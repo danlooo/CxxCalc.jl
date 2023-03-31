@@ -1,4 +1,12 @@
-# Julia bindings for a C++ library
+# CxxCalc.jl: A C++ Calculator Library with Julia Bindings
+
+[![CI](https://github.com/danlooo/CxxCalc.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/danlooo/CxxCalc.jl/actions/workflows/CI.yml)
+
+<img src="logo.svg" align="right" style="padding-left:10px;" width="150"/>
+
+The main goal of this project is to demonstrate the direct access of C++ library functions and types within Julia.
+CxxCalc.jl is a basic calculator libray written in C++.
+The CI/CD pipeline will automatically create a Julia package from that C++ library code to access the C++ functions in Julia using pointers instead of system calls.
 
 ## Get Started
 
