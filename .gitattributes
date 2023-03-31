@@ -1,1 +1,1 @@
-buildenv/install-julia.sh linguist-vendored=false
+buildenv/install-julia.sh linguist-detectable=false
