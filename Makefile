@@ -1,3 +1,3 @@
 .PHONY: main
 main:
-	earthly +main
+	earthly --artifact +main/out out
