@@ -4,18 +4,18 @@ WORKDIR /work
 
 main:
     BUILD +buildenv
-    BUILD +build
+    BUILD +cxxcalc-julia
     BUILD +test
 
 buildenv:
     FROM DOCKERFILE -f buildenv/Dockerfile buildenv
     SAVE IMAGE danlooo/build-cxx-julia
 
-build:
+cxxcalc-julia:
     FROM +buildenv
     COPY src src/
     RUN build src
-    SAVE ARTIFACT out
+    SAVE ARTIFACT out AS LOCAL cxxcalc-julia
 
 test:
     FROM julia:1.8.5
