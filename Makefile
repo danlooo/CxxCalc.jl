@@ -1,4 +1,4 @@
 .PHONY: main
 main:
 	earthly +main
-	earthly --artifact +build/out out
+	earthly --artifact +cxxcalc-julia/out out

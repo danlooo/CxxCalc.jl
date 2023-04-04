@@ -13,13 +13,13 @@ buildenv:
 
 cxxcalc-julia:
     FROM +buildenv
-    COPY src src/
-    RUN build src
+    COPY cxxcalc cxxcalc/
+    RUN build cxxcalc
     SAVE ARTIFACT out AS LOCAL cxxcalc-julia
 
 test:
     FROM julia:1.8.5
     RUN julia -e 'using Pkg; Pkg.add("CxxWrap")'
-    COPY +build/out/ out/
+    COPY +cxxcalc-julia/out/ out/
     COPY test/ test/
     RUN julia test/test.jl
